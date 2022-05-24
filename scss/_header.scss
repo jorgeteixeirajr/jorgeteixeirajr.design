@@ -1,0 +1,40 @@
+header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 9.4rem;
+  display: flex;
+  .container {
+    @include flex(row, center, space-between);
+    .logo {
+      img {
+        width: 100%;
+        max-width: 25.2rem;
+      }
+    }
+    .menu {
+      @include flex(row, center, center);
+      ul {
+        @include flex(row, center, center);
+        margin-right: 4rem;
+        li {
+          &:not(:last-child) {
+            margin-right: 4rem;
+          }
+          a {
+            font-family: "Roboto";
+            font-weight: 500;
+            font-size: 1.6rem;
+            line-height: 125%;
+            color: $gray800;
+            transition: color 0.3s;
+            &:hover {
+              color: $brand-primary-light;
+            }
+          }
+        }
+      }
+    }
+  }
+}
