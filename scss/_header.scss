@@ -1,6 +1,7 @@
 header {
   width: 100%;
-  position: absolute;
+  background-color: $white;
+  position: fixed;
   top: 0;
   left: 0;
   height: 9.4rem;
@@ -37,43 +38,43 @@ header {
         }
       }
     }
-    .menu__mobile{
+    .menu__mobile {
       display: none;
     }
   }
-  @include responsive(991px){
-    .container{
-      .menu{
-      ul{
-        margin-right: 1.6rem;
-        li{
-          &:not(:last-child){
-            margin-right: 1.6rem;
+  @include responsive(991px) {
+    .container {
+      .menu {
+        ul {
+          margin-right: 1.6rem;
+          li {
+            &:not(:last-child) {
+              margin-right: 1.6rem;
+            }
           }
         }
       }
-    }
-    .btn-primary{
-      font-size: 1.4rem;
-      padding: 0.4rem 1.6rem;
-    }
-    }
-  }
-
-  @include responsive(768px){
-    .container{
-      .menu{
-      display: none;
-    }
-    .menu__mobile{
-      display: block;
-    }
+      .btn-primary {
+        font-size: 1.4rem;
+        padding: 0.4rem 1.6rem;
+      }
     }
   }
 
-  @include responsive(468px){
-    .container{
-      .logo{
+  @include responsive(768px) {
+    .container {
+      .menu {
+        display: none;
+      }
+      .menu__mobile {
+        display: block;
+      }
+    }
+  }
+
+  @include responsive(468px) {
+    .container {
+      .logo {
         img {
           max-width: 20rem;
         }
