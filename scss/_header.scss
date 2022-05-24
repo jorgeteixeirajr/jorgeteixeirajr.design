@@ -4,6 +4,7 @@ header {
   top: 0;
   left: 0;
   height: 9.4rem;
+  z-index: 2022;
   display: flex;
   .container {
     @include flex(row, center, space-between);
