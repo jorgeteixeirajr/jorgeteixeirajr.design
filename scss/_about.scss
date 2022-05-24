@@ -25,30 +25,40 @@
     }
   }
 
-  @include responsive(1200px){
-    .container{
+  @include responsive(1200px) {
+    .container {
       justify-content: space-around;
       gap: 3.2rem;
-      .about-img{
-        img{
+      .about-img {
+        img {
           max-width: 32rem;
         }
       }
-      .about-text{
-        p{
+      .about-text {
+        p {
           max-width: 64rem;
         }
       }
     }
   }
 
-  @include responsive(991px){
-    .container{
+  @include responsive(991px) {
+    .container {
       @include flex(column, center, center);
-      .about-text{
+      .about-text {
         @include flex(column, center, center);
-        p{
+        p {
           text-align: center;
+        }
+      }
+    }
+  }
+
+  @include responsive(468px) {
+    .container {
+      .about-text {
+        p {
+          font-size: 1.6rem;
         }
       }
     }
