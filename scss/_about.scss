@@ -24,4 +24,33 @@
       }
     }
   }
+
+  @include responsive(1200px){
+    .container{
+      justify-content: space-around;
+      gap: 3.2rem;
+      .about-img{
+        img{
+          max-width: 32rem;
+        }
+      }
+      .about-text{
+        p{
+          max-width: 64rem;
+        }
+      }
+    }
+  }
+
+  @include responsive(991px){
+    .container{
+      @include flex(column, center, center);
+      .about-text{
+        @include flex(column, center, center);
+        p{
+          text-align: center;
+        }
+      }
+    }
+  }
 }
