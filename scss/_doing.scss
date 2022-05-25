@@ -1,0 +1,69 @@
+.s-work {
+  margin-bottom: 11.2rem;
+  .container {
+    .work-itens {
+      @include flex(row, center, space-around);
+      margin-top: 4rem;
+      .design,
+      .dev {
+        @include flex(row, center, center);
+        gap: 4.8rem;
+        .design-img,
+        .dev-img {
+          display: flex;
+          background: $brand-gradient;
+          border-radius: 1.6rem;
+          img {
+            padding: 3rem;
+          }
+        }
+        .design-text,
+        .dev-text {
+          max-width: 30rem;
+          p {
+            margin-top: 1.6rem;
+            font-size: 1.8rem;
+            line-height: 130%;
+          }
+        }
+      }
+    }
+  }
+
+  @include responsive(991px) {
+    .container {
+      @include flex(column, center, center);
+      .work-itens {
+        .design,
+        .dev {
+          @include flex(column, center, center);
+        }
+        .design-img,
+        .dev-img {
+          min-width: 5rem;
+        }
+        .design-text,
+        .dev-text {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  @include responsive(468px) {
+    .container {
+      .work-itens {
+        @include flex(column, center, center);
+        gap: 3.2rem;
+        .design,
+        .dev {
+          gap: 2.4rem;
+          .design-img,
+          .dev-img {
+            width: 8rem;
+          }
+        }
+      }
+    }
+  }
+}
