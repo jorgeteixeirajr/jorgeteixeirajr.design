@@ -15,6 +15,7 @@
         "../scss/_home.scss",
         "../scss/_about.scss",
         "../scss/_doing.scss",
+        "../scss/_projects.scss",
         "../scss/_footer.scss"
     ],
     "names": [],
